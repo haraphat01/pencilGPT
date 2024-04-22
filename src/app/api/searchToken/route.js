@@ -1,7 +1,9 @@
+import Moralis from 'moralis';
 export async function POST(req, res) {
     let passedValue = await new Response(req.body).text();
     let bodyreq = JSON.parse(passedValue);
-
+    const { chain, address } = bodyreq
+    console.log(chain, address)
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method Not Allowed' });
     }
@@ -13,16 +15,16 @@ export async function POST(req, res) {
         });
 
         const response = await Moralis.EvmApi.token.getTokenPrice({
-            "chain": "0x1",
+            "chain": chain,
             "include": "percent_change",
-            "address": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0"
+            "address": address
         });
+        console.log(response)
+        res.status(200).json({ response });
 
-        res.status(200).json({ description: response.choices[0] });
-        // return OpenAIStream(response);
 
     } catch (error) {
-        console.error('OpenAI API Error:', error);
+        console.error('Error:', error);
         res.status(500).json({ error: 'Failed to generate description' });
     }
 }
