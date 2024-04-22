@@ -35,10 +35,19 @@ export default function Homepage() {
                     onChange={(e) => setNetwork(e.target.value)}
                     className="border border-gray-300 rounded-md p-2"
                 >
-                    <option value="mainnet">Mainnet</option>
-                    <option value="ropsten">Ropsten</option>
-                    <option value="rinkeby">Rinkeby</option>
-                    <option value="kovan">Kovan</option>
+                    <option value="eth">Etherum</option>
+                    <option value="polygon">Polygon</option>
+                    <option value="bsc">BinanceSC</option>
+                    <option value="avalanche">Avalanche</option>
+                    <option value="fantom">Fantom</option>
+                    <option value="palm">Palm</option>
+                    <option value="cronos">Cronos</option>
+                    <option value="arbitrum">Arbitrum</option>
+                    <option value="base">Base</option>
+                    <option value="gnosis">Gnosis</option>
+                    <option value="optimism">Gnosis</option>
+                    <option value="linea">Linea</option>
+                    <option value="moonbeam">Moonbeam</option>
                 </select>
             </div>
             <button onClick={handleSearch} className="bg-blue-500 text-white rounded-md px-4 py-2 mb-4 hover:bg-blue-600">Search</button>
