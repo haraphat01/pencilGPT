@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import NavBar from '../app/components/navBar'
 import { Inter } from "next/font/google";
 import "./global.css";
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <NavBar /> {/* Add the NavBar component here */}
+        {children}
+      </body>
     </html>
   );
 }
