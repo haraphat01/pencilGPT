@@ -1,11 +1,25 @@
 "use client"
 import React, { useState } from 'react';
+import ReactMarkdown from 'react-markdown'
+import '../markdown-styles.module.css'
+
+const styles = {
+    // Define your styles here
+    
+        color: 'black', // Example color
+        fontSize: '16px', // Example font size
+        fontFamily: 'Arial, sans-serif',
+        paddingTop: '1rem' // Example font family
+
+};
 
 export default function Homepage() {
     const [contractAddress, setContractAddress] = useState('');
     const [chain, setChain] = useState('0x1');
     const [tokenData, setTokenData] = useState('');
     const [loading, setLoading] = useState('');
+    const [groqresult, setGroqresult] = useState('');
+
 
     const handleSearch = async (e) => {
         console.log(chain, contractAddress)
@@ -27,6 +41,7 @@ export default function Homepage() {
             if (response.ok) {
                 const result = await response.json();
                 setTokenData(result) // Update the tokenData state with the API response
+                setGroqresult(result.groqresult);
                 setLoading(false);
                 // Handle the response as needed
 
@@ -38,7 +53,7 @@ export default function Homepage() {
         }
 
     };
-    console.log("token data", tokenData)
+
     return (
         <div className="bg-white text-black  flex flex-col items-center justify-center">
             <h1 className="text-3xl font-bold mb-4 text-center">Crypto Token Explorer</h1>
@@ -80,9 +95,9 @@ export default function Homepage() {
                 </select>
             </div>
             <button onClick={handleSearch} className="bg-blue-500 text-white rounded-md px-4 py-2 mb-4 hover:bg-blue-600">Search</button>
-            {loading && <p>Loading...</p>} {/* Show a loading message while waiting for the API response */}
+            {loading && <p className="font-beautiful">Loading...</p>}
             {tokenData && tokenData.response && ( // Ensure tokenData is not null and has the expected properties
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center border border-black m-4 p-4">
                     <h2 className="text-2xl font-bold mb-2">{tokenData.response.tokenName} ({tokenData.response.tokenSymbol})</h2>
                     <img src={tokenData.response.tokenLogo} alt={tokenData.response.tokenName} className="w-24 h-24 mb-2" />
                     <p className="mb-2 ">Price: {tokenData.response.usdPrice}</p>
@@ -93,6 +108,21 @@ export default function Homepage() {
                     <p className="mb-2"> Contract Verified?: {tokenData.response.verifiedContract ? 'Yes' : 'No'}</p>
                 </div>
             )}
+
+            {groqresult && (
+                <div className="flex flex-col items-center pt-5 border border-black  p-4">
+
+<ReactMarkdown
+  components={{
+    p: ({ node, ...props }) => <p style={styles} {...props} />,
+  }}
+>
+  {groqresult}
+</ReactMarkdown>
+
+                </div>
+            )}
+
         </div>
 
     );

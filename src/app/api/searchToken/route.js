@@ -1,7 +1,8 @@
 import Moralis from 'moralis';
 import { NextResponse } from 'next/server'
 import axios from 'axios';
-import  serpResults  from '../../components/serpResults'
+import serpResults from '../../components/serpResults'
+import getGroqChatCompletion from '../../components/getGroqChatCompletion'
 
 export async function POST(req, res) {
     let passedValue = await new Response(req.body).text();
@@ -25,14 +26,23 @@ export async function POST(req, res) {
             "include": "percent_change",
             "address": address
         });
-        console.log("result from response",response)
-        let query = `fundamental analysis about ${response.jsonResponse.tokenName} coin with token symbol ${response.jsonResponse.tokenSymbol}`
-        const result = await serpResults(query);
+
+        let query = `latest news about ${response.jsonResponse.tokenName} coin with token symbol ${response.jsonResponse.tokenSymbol}`
       
-        
-        console.log("result from serp",result)
-        return NextResponse.json({ result }, { status: 200 })
+        const result = await serpResults(query);
        
+        let textContent = '';
+
+        result.organic.forEach((item, index) => {
+            textContent += `Title: ${item.title}\nLink: ${item.link}\nSnippet: ${item.snippet}\n\n`;
+        });
+
+        const groqresult = await getGroqChatCompletion(textContent);
+
+      
+
+        return NextResponse.json({ response, groqresult }, { status: 200 })
+
 
     } catch (error) {
         console.error('Error:', error);
