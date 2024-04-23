@@ -17,7 +17,7 @@ export async function POST(req, res) {
     try {
         if (!Moralis.Core.isStarted) {
             await Moralis.start({
-                apiKey: process.env.MORALIS_API,
+                apiKey: process.env.NEXT_PUBLIC_MORALIS_API,
             });
         }
 

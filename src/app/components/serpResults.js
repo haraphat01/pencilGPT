@@ -7,7 +7,7 @@ async function serpResults(query) {
       method: 'post',
       url: 'https://google.serper.dev/search',
       headers: { 
-        'X-API-KEY': process.env.SERP_API, 
+        'X-API-KEY': process.env.NEXT_PUBLIC_SERP_API, 
         'Content-Type': 'application/json'
       },
       data: data
