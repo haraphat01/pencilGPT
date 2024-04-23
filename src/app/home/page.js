@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 export default function Homepage() {
     const [contractAddress, setContractAddress] = useState('');
-    const [chain, setChain] = useState('mainnet');
+    const [chain, setChain] = useState('0x1');
     const [tokenData, setTokenData] = useState('');
     const [loading, setLoading] = useState('');
 
@@ -89,9 +89,8 @@ export default function Homepage() {
                     <p className="mb-2">24hr Percent Change: {tokenData.response['24hrPercentChange']}</p>
                     <p className="mb-2">Exchange Name: {tokenData.response.exchangeName}</p>
                     <p className="mb-2">Exchange Address: {tokenData.response.exchangeAddress}</p>
-                    <p className="mb-2">Token Address: {tokenData.response.tokenAddress}</p>
                     <p className="mb-2">Token Decimals: {tokenData.response.tokenDecimals}</p>
-                    <p className="mb-2">Verified Contract: {tokenData.response.verifiedContract ? 'Yes' : 'No'}</p>
+                    <p className="mb-2"> Contract Verified?: {tokenData.response.verifiedContract ? 'Yes' : 'No'}</p>
                 </div>
             )}
         </div>
