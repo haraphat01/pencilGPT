@@ -4,10 +4,12 @@ import React, { useState } from 'react';
 export default function Homepage() {
     const [contractAddress, setContractAddress] = useState('');
     const [chain, setChain] = useState('mainnet');
-    const [tokenData, setTokenData] = useState(null);
+    const [tokenData, setTokenData] = useState('');
+    const [loading, setLoading] = useState('');
 
     const handleSearch = async (e) => {
         console.log(chain, contractAddress)
+        console.log("token data", tokenData)
         const apiUrl = '/api/searchToken'; // Your API route URL
         try {
             const response = await fetch(apiUrl, {
@@ -24,8 +26,10 @@ export default function Homepage() {
 
             if (response.ok) {
                 const result = await response.json();
+                setTokenData(result) // Update the tokenData state with the API response
+                setLoading(false);
                 // Handle the response as needed
-                console.log("result", result)
+
             } else {
                 console.error('Failed to send data:', response.statusText);
             }
@@ -34,7 +38,7 @@ export default function Homepage() {
         }
 
     };
-
+    console.log("token data", tokenData)
     return (
         <div className="bg-white text-black  flex flex-col items-center justify-center">
             <h1 className="text-3xl font-bold mb-4 text-center">Crypto Token Explorer</h1>
@@ -76,15 +80,21 @@ export default function Homepage() {
                 </select>
             </div>
             <button onClick={handleSearch} className="bg-blue-500 text-white rounded-md px-4 py-2 mb-4 hover:bg-blue-600">Search</button>
-
-            {tokenData && (
-                <div>
-                    <h2>{tokenData.name} ({tokenData.symbol})</h2>
-                    <p>Total Supply: {tokenData.totalSupply}</p>
-                    <p>Current Price: {tokenData.currentPrice}</p>
-                    {/* Add more details here */}
+            {loading && <p>Loading...</p>} {/* Show a loading message while waiting for the API response */}
+            {tokenData && tokenData.response && ( // Ensure tokenData is not null and has the expected properties
+                <div className="flex flex-col items-center">
+                    <h2 className="text-2xl font-bold mb-2">{tokenData.response.tokenName} ({tokenData.response.tokenSymbol})</h2>
+                    <img src={tokenData.response.tokenLogo} alt={tokenData.response.tokenName} className="w-24 h-24 mb-2" />
+                    <p className="mb-2 ">Price: {tokenData.response.usdPrice}</p>
+                    <p className="mb-2">24hr Percent Change: {tokenData.response['24hrPercentChange']}</p>
+                    <p className="mb-2">Exchange Name: {tokenData.response.exchangeName}</p>
+                    <p className="mb-2">Exchange Address: {tokenData.response.exchangeAddress}</p>
+                    <p className="mb-2">Token Address: {tokenData.response.tokenAddress}</p>
+                    <p className="mb-2">Token Decimals: {tokenData.response.tokenDecimals}</p>
+                    <p className="mb-2">Verified Contract: {tokenData.response.verifiedContract ? 'Yes' : 'No'}</p>
                 </div>
             )}
         </div>
+
     );
 }

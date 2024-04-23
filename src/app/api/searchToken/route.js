@@ -1,4 +1,5 @@
 import Moralis from 'moralis';
+import { NextResponse } from 'next/server'
 export async function POST(req, res) {
     let passedValue = await new Response(req.body).text();
     let bodyreq = JSON.parse(passedValue);
@@ -10,9 +11,11 @@ export async function POST(req, res) {
 
 
     try {
-        await Moralis.start({
-            apiKey: process.env.MORALIS_API,
-        });
+        if (!Moralis.isInitialized) {
+            await Moralis.start({
+                apiKey: process.env.MORALIS_API,
+            });
+        }
 
         const response = await Moralis.EvmApi.token.getTokenPrice({
             "chain": chain,
@@ -20,11 +23,11 @@ export async function POST(req, res) {
             "address": address
         });
         console.log(response)
-        res.status(200).json({ response });
-
+        return NextResponse.json({ response }, { status: 200 })
 
     } catch (error) {
         console.error('Error:', error);
-        res.status(500).json({ error: 'Failed to generate description' });
+        return NextResponse.json({ error }, { status: 500 })
     }
 }
+
