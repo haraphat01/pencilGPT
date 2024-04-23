@@ -101,7 +101,8 @@ export default function Homepage() {
                 <div className="flex flex-col items-center border border-black m-4 p-4">
                     <h2 className="text-2xl font-bold mb-2">{tokenData.response.tokenName} ({tokenData.response.tokenSymbol})</h2>
 
-                    <Image src={tokenData.response.tokenLogo} alt={tokenData.response.tokenName} className="w-24 h-24 mb-2" />
+                    <Image src={tokenData.response.tokenLogo} alt={tokenData.response.tokenName} className=" mb-2"  width={50}
+  height={50}/>
                     <p className="mb-2 ">Price: {tokenData.response.usdPrice}</p>
                     <p className="mb-2">24hr Percent Change: {tokenData.response['24hrPercentChange']}</p>
                     <p className="mb-2">Exchange Name: {tokenData.response.exchangeName}</p>
