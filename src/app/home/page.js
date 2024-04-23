@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown'
-import '../markdown-styles.module.css'
+import Image from 'next/image';
 
 const styles = {
     // Define your styles here
@@ -58,8 +58,9 @@ export default function Homepage() {
         <div className="bg-white text-black  flex flex-col items-center justify-center">
             <h1 className="text-3xl font-bold mb-4 text-center">🚀 Welcome to PencilGPT – Your Gateway to Crypto Knowledge! 📚</h1>
             <p className="mb-8 text-center">Unlock the power of artificial intelligence with PencilGPT, the ultimate web platform for all your crypto-related data needs.</p>
-            <p className="mb-8 text-center">Whether you're a seasoned trader, a curious investor, or a crypto enthusiast, PencilGPT puts the world of cryptocurrency at your fingertips.</p>
+            <p className="mb-8 text-center">Whether you&apos;re a seasoned trader, a curious investor, or a crypto enthusiast, PencilGPT puts the world of cryptocurrency at your fingertips.</p>
             <p className="mb-8 text-center"> Fundamental analysis at your finger tips - paste the coin contract address - select the right chain and search.</p>
+
 
             <div className="flex mb-4">
                 <input
@@ -99,7 +100,8 @@ export default function Homepage() {
             {tokenData && tokenData.response && ( // Ensure tokenData is not null and has the expected properties
                 <div className="flex flex-col items-center border border-black m-4 p-4">
                     <h2 className="text-2xl font-bold mb-2">{tokenData.response.tokenName} ({tokenData.response.tokenSymbol})</h2>
-                    <img src={tokenData.response.tokenLogo} alt={tokenData.response.tokenName} className="w-24 h-24 mb-2" />
+
+                    <Image src={tokenData.response.tokenLogo} alt={tokenData.response.tokenName} className="w-24 h-24 mb-2" />
                     <p className="mb-2 ">Price: {tokenData.response.usdPrice}</p>
                     <p className="mb-2">24hr Percent Change: {tokenData.response['24hrPercentChange']}</p>
                     <p className="mb-2">Exchange Name: {tokenData.response.exchangeName}</p>

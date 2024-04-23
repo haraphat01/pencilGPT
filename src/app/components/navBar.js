@@ -6,13 +6,15 @@ const NavBar = () => {
         <nav className="bg-gray-800 text-white py-4">
             <div className="container mx-auto flex justify-between items-center">
                 <div className="logo">
-                    <Link href="/" className="text-white font-bold text-xl">
-                        Pencil AI
+                    <Link href="/" target="_blank" className="text-white font-bold text-xl">
+                          Pencil AI
+                       
                     </Link>
                 </div>
                 <div className="links">
-                    <Link href="/about" className="ml-4">
-                        About
+                <Link href="https://t.me/TajiriBot" target="_blank" className="text-white font-bold text-xl">
+                       
+                        <button> Try our AI telegram Bot</button>
                     </Link>
                     <Link href="/contact" className="ml-4">
                         Contact
