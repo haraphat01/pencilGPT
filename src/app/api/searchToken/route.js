@@ -1,6 +1,8 @@
 import Moralis from 'moralis';
 import { NextResponse } from 'next/server'
-import { serpResult } from 'src/app/api/searchToken/serpResult'
+import axios from 'axios';
+import  serpResults  from '../../components/serpResults'
+
 export async function POST(req, res) {
     let passedValue = await new Response(req.body).text();
     let bodyreq = JSON.parse(passedValue);
@@ -24,10 +26,12 @@ export async function POST(req, res) {
             "address": address
         });
         console.log("result from response",response)
-        let query = `fundamental analysis about ${response.tokenName} coin with ${response.tokenSymbol}`
-        const result = serpResult(query);
+        let query = `fundamental analysis about ${response.jsonResponse.tokenName} coin with token symbol ${response.jsonResponse.tokenSymbol}`
+        const result = await serpResults(query);
+      
+        
         console.log("result from serp",result)
-        return NextResponse.json({ response }, { status: 200 })
+        return NextResponse.json({ result }, { status: 200 })
        
 
     } catch (error) {

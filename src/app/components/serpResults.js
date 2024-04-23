@@ -1,24 +1,22 @@
-const axios = require('axios');
+import axios from 'axios';
 
-async function serpResults(data) {
-  let config = {
-    method: 'post',
-    url: 'https://google.serper.dev/search',
-    headers: { 
-      'X-API-KEY': process.env.SERP_API, 
-      'Content-Type': 'application/json'
-    },
-    data : JSON.stringify(data)
-  };
-
+async function serpResults(query) {
   try {
+    const data = JSON.stringify({ q: query });
+    const config = {
+      method: 'post',
+      url: 'https://google.serper.dev/search',
+      headers: { 
+        'X-API-KEY': '94cdc6f1eec58d5379d6ebf0d810b53459b1aa98', 
+        'Content-Type': 'application/json'
+      },
+      data: data
+    };
+
     const response = await axios(config);
-    console.log(JSON.stringify(response.data));
     return response.data;
   } catch (error) {
-    console.log(error);
+    throw new Error('Error searching Google:', error);
   }
 }
-
-module.exports = serpResults;
-
+export default serpResults;
