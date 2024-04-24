@@ -1,28 +1,42 @@
 // components/NavBar.js
-import Link from 'next/link';
+import React from "react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from "@nextui-org/react";
 
-const NavBar = () => {
+
+export default function NavBars() {
     return (
-        <nav className="bg-gray-800 text-white py-4">
-            <div className="container mx-auto flex justify-between items-center">
-                <div className="logo">
-                    <Link href="/" target="_blank" className="text-white font-bold text-xl">
-                          Pencil AI
-                       
-                    </Link>
-                </div>
-                <div className="links">
-                <Link href="https://t.me/TajiriBot" target="_blank" className="text-white font-bold text-xl">
-                       
+        <Navbar className="mt-5">
+            <NavbarBrand>
+                <p className="font-bold text-inherit">Pencil AI</p>
+            </NavbarBrand>
+            <NavbarContent className="hidden sm:flex gap-4" justify="center">
+                <NavbarItem>
+                    <Link href="https://t.me/TajiriBot" color="foreground" target="_blank" className="text-white font-bold text-xl">
                         <button> Try our AI telegram Bot</button>
                     </Link>
-                    <Link href="/contact" className="ml-4">
-                        Contact
+                </NavbarItem>
+                <NavbarItem isActive>
+                    <Link href="#" aria-current="page">
+                        About
                     </Link>
-                </div>
-            </div>
-        </nav>
-    );
-};
+                </NavbarItem>
+                <NavbarItem>
+                    <Link color="foreground" href="#">
+                        Connect wallet
+                    </Link>
+                </NavbarItem>
+            </NavbarContent>
+            <NavbarContent justify="end">
+                <NavbarItem className="hidden lg:flex">
+                    <Link href="#">Login</Link>
+                </NavbarItem>
 
-export default NavBar;
+                <NavbarItem>
+                    <Button as={Link} color="primary" href="https://t.me/TajiriBot" variant="flat">
+                        Try our AI telegram Bot
+                    </Button>
+                </NavbarItem>
+            </NavbarContent>
+        </Navbar>
+    );
+}
