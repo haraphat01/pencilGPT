@@ -5,7 +5,7 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from "@n
 
 export default function NavBars() {
     return (
-        <Navbar className="mt-5">
+        <Navbar className="mt-5 fixed w-full  top-0 ">
             <NavbarBrand>
                 <p className="font-bold text-inherit">Pencil AI</p>
             </NavbarBrand>
@@ -21,14 +21,14 @@ export default function NavBars() {
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link color="foreground" href="#">
+                    <Link color="foreground" href="">
                         Connect wallet
                     </Link>
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent justify="end">
                 <NavbarItem className="hidden lg:flex">
-                    <Link href="#">Login</Link>
+                    <Link href="https://pencil-ai.gitbook.io/pencilai-lite-paper/">Read our litepaper</Link>
                 </NavbarItem>
 
                 <NavbarItem>

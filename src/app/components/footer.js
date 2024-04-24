@@ -1,4 +1,6 @@
 // components/Footer.js
+import Link from "next/link";
+import Image from 'next/image';
 const Footer = () => {
     return (
         <footer className="bg-white">
@@ -8,7 +10,7 @@ const Footer = () => {
               <Link href="#">
                 <button className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl">
                   {/*Icon from: http://www.potlabicons.com/ */}
-                  <img src="../pencil.jpg" className="h-8 fill-current inline" style={{ height: '50px', width: '50px' }} />
+                  <Image src="/pencil.jpg" alt="Pencil" width={50} height={50} />
                   Pencil AI
                 </button>
               </Link>
