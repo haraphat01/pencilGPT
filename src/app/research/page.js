@@ -56,7 +56,7 @@ export default function Homepage() {
     };
 
     return (
-        <div className="bg-white text-black  flex flex-col items-center justify-center">
+        <div className="bg-white text-black  flex flex-col items-center justify-center pt-5 mt-5">
             <h1 className="text-3xl font-bold mb-4 text-center">🚀 Welcome to PencilGPT – Your Gateway to Crypto Knowledge! 📚</h1>
             <p className="mb-8 text-center">Unlock the power of artificial intelligence with PencilGPT, the ultimate web platform for all your crypto-related data needs.</p>
             <p className="mb-8 text-center">Whether you&apos;re a seasoned trader, a curious investor, or a crypto enthusiast, PencilGPT puts the world of cryptocurrency at your fingertips.</p>

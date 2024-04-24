@@ -4,27 +4,28 @@ export default function HomePage() {
     return (
         <>
 
-            <div className="pt-24">
-                <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-                    {/* Left Col */}
-                    <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-                        <h1 className="leading-normal text-2xl mb-8">🚀 Welcome to the Future of Productivity with Pencil AI! 🌟</h1>
-                        <p className="leading-normal text-2xl mb-8">
-                            Embark on a journey of innovation and empowerment with Pencil AI, where cutting-edge technology meets limitless possibilities. Our platform revolutionizes the way you work, learn, and interact, offering AI-powered solutions tailored to your needs. With Pencil AI, you'll experience unparalleled efficiency, insight, and convenience like never before.
-                        </p>
-                        <p className="leading-normal text-2xl mb-8">Join our vibrant community of forward-thinkers, explorers, and visionaries, and discover the boundless potential of our ecosystem. Whether you're a crypto enthusiast, a productivity aficionado, or a tech-savvy individual seeking the next big thing, Pencil AI welcomes you with open arms.</p>
-                        <button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                            <Link href="https://t.me/+E-SXVdadAAgzNzg0" target="_blank">
-                                <button>Join PencilAI Community</button>
-                            </Link>
-                        </button>
-                    </div>
-                    {/* Right Col */}
-                    <div className="w-full md:w-3/5 py-6 text-center">
-                        <img className="w-full md:w-4/5 z-50" src="hero.png" />
-                    </div>
+
+            <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+
+                <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+                    <h1 className="leading-normal text-2xl md:text-4xl mb-4 md:mb-8">🚀 Welcome to the Future of Productivity with Pencil AI! 🌟</h1>
+                    <p className="leading-normal text-lg md:text-2xl mb-4 md:mb-8">
+                        Embark on a journey of innovation and empowerment with Pencil AI, where cutting-edge technology meets limitless possibilities. Our platform revolutionizes the way you work, learn, and interact, offering AI-powered solutions tailored to your needs. With Pencil AI, you'll experience unparalleled efficiency, insight, and convenience like never before.
+                    </p>
+                    <p className="leading-normal text-lg md:text-2xl mb-4 md:mb-8">Join our vibrant community of forward-thinkers, explorers, and visionaries, and discover the boundless potential of our ecosystem. Whether you're a crypto enthusiast, a productivity aficionado, or a tech-savvy individual seeking the next big thing, Pencil AI welcomes you with open arms.</p>
+                    <button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                        <Link href="https://t.me/+E-SXVdadAAgzNzg0" target="_blank">
+                            Join PencilAI Community
+                        </Link>
+                    </button>
+                </div>
+
+
+                <div className="w-full md:w-3/5 py-6 text-center">
+                    <img className="w-full md:w-4/5 z-50" src="hero.png" />
                 </div>
             </div>
+
 
             {/* Other sections go here */}
             <section className="bg-white border-b py-8">
@@ -52,11 +53,9 @@ export default function HomePage() {
                                     you
                                     have access to a smart, responsive, and always-on virtual assistant. You can also seamlessly integrate
                                     into your
-                                    group chats; it offers instant, AI-powered assistance tailored to your group's discussions. Just mention
+                                    group chats. It offers instant AI-powered assistance tailored to your group's discussions. Just mention
                                     the
-                                    bot's name at the end of your query, and watch as it delivers insightful responses, making group
-                                    interactions smarter
-                                    and more efficient.
+                                    bot's name at the end of your query.
                                 </p>
 
                             </Link>
@@ -77,25 +76,27 @@ export default function HomePage() {
                     </div>
                     <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
                         <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-                            <Link href="/research" className="flex flex-wrap no-underline hover:no-underline">
 
-                                <div className="w-full font-bold text-xl text-gray-800 px-6 text-center pt-4 pb-4">
-                                    <p>PencilResearch</p>
-                                    <p> 📝 Quick Market Research Assistant! 🎙️</p>
-                                </div>
 
-                                <p className="text-gray-800 text-base px-6 mb-5">
-                                    PencilResearch is your all-in-one platform for comprehensive cryptocurrency analysis. From in-depth fundamental research to real-time sentiment tracking, PencilResearch equips traders and investors with the insights they need to make informed decisions in the dynamic world of digital assets.🚀
-                                </p>
+                            <div className="w-full font-bold text-xl text-gray-800 px-6 text-center pt-4 pb-4">
+                                <p>PencilResearch</p>
+                                <p> 📝 Quick Market Research Assistant! 🎙️</p>
+                            </div>
 
-                            </Link>
+                            <p className="text-gray-800 text-base px-6 mb-5">
+                                PencilResearch is your all-in-one platform for comprehensive cryptocurrency analysis. From in-depth fundamental research to real-time sentiment tracking, PencilResearch equips traders and investors with the insights they need to make informed decisions in the dynamic world of digital assets.🚀
+                            </p>
+
+
                         </div>
                         <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                             <div className="flex items-center justify-center">
-                                <button
-                                    className="mx-auto lg:mx-0 hover:underline gradient  font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                                    Try it here
-                                </button>
+                                <Link href="/research" className="flex flex-wrap no-underline hover:no-underline">
+                                    <button
+                                        className="mx-auto lg:mx-0 hover:underline gradient  font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                                        Try it here
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -160,12 +161,8 @@ export default function HomePage() {
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </section>
-
-            {/* Footer */}
 
         </>
     );
