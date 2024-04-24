@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import Image from 'next/image';
 export default function HomePage() {
     return (
         <>
@@ -10,9 +10,10 @@ export default function HomePage() {
                 <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
                     <h1 className="leading-normal text-2xl md:text-4xl mb-4 md:mb-8">🚀 Welcome to the Future of Productivity with Pencil AI! 🌟</h1>
                     <p className="leading-normal text-lg md:text-2xl mb-4 md:mb-8">
-                        Embark on a journey of innovation and empowerment with Pencil AI, where cutting-edge technology meets limitless possibilities. Our platform revolutionizes the way you work, learn, and interact, offering AI-powered solutions tailored to your needs. With Pencil AI, you'll experience unparalleled efficiency, insight, and convenience like never before.
+                        Embark on a journey of innovation and empowerment with Pencil AI, where cutting-edge technology meets limitless possibilities. Our platform revolutionizes the way you work, learn, and interact, offering AI-powered solutions tailored to your needs. With Pencil AI, you&apos;ll experience unparalleled efficiency, insight, and convenience like never before.
                     </p>
-                    <p className="leading-normal text-lg md:text-2xl mb-4 md:mb-8">Join our vibrant community of forward-thinkers, explorers, and visionaries, and discover the boundless potential of our ecosystem. Whether you're a crypto enthusiast, a productivity aficionado, or a tech-savvy individual seeking the next big thing, Pencil AI welcomes you with open arms.</p>
+                    <p className="leading-normal text-lg md:text-2xl mb-4 md:mb-8">Join our vibrant community of forward-thinkers, explorers, and visionaries, and discover the boundless potential of our ecosystem. Whether you&apos;re a crypto enthusiast, a productivity aficionado, or a tech-savvy individual seeking the next big thing, Pencil AI welcomes you with open arms.</p>
+
                     <button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                         <Link href="https://t.me/+E-SXVdadAAgzNzg0" target="_blank">
                             Join PencilAI Community
@@ -22,7 +23,8 @@ export default function HomePage() {
 
 
                 <div className="w-full md:w-3/5 py-6 text-center">
-                    <img className="w-full md:w-4/5 z-50" src="hero.png" />
+
+                <Image src="/hero.png" alt="Hero Image" width={500} height={500} layout="responsive" />
                 </div>
             </div>
 
@@ -53,10 +55,11 @@ export default function HomePage() {
                                     you
                                     have access to a smart, responsive, and always-on virtual assistant. You can also seamlessly integrate
                                     into your
-                                    group chats. It offers instant AI-powered assistance tailored to your group's discussions. Just mention
+                                    group chats. It offers instant AI-powered assistance tailored to your group&apos;s discussions. Just mention
                                     the
-                                    bot's name at the end of your query.
+                                    bot&apos;s name at the end of your query.
                                 </p>
+
 
                             </Link>
                         </div>
@@ -111,15 +114,10 @@ export default function HomePage() {
                                 </div>
 
 
-                                <p class="text-gray-800 text-base px-6 mb-5">
-                                    PencilGPT is a revolutionary AI-powered web platform designed to streamline your crypto research
-                                    experience. With its intuitive natural language interface, PencilGPT allows users to effortlessly query
-                                    any crypto-related data in plain language. Whether you're seeking price updates, market trends, or
-                                    project
-                                    details, PencilGPT provides comprehensive and accurate information at your fingertips. It can also be
-                                    used
-                                    to streamlined your investment decision with the power of trained model on financial data.
+                                <p className="text-gray-800 text-base px-6 mb-5">
+                                    PencilGPT is a revolutionary AI-powered web platform designed to streamline your crypto research experience. With its intuitive natural language interface, PencilGPT allows users to effortlessly query any crypto-related data in plain language. Whether you&apos;re seeking price updates, market trends, or project details, PencilGPT provides comprehensive and accurate information at your fingertips. It can also be used to streamline your investment decision with the power of trained model on financial data.
                                 </p>
+
 
                             </Link>
                         </div>
@@ -143,12 +141,9 @@ export default function HomePage() {
                                 </div>
 
                                 <p className="text-gray-800 text-base px-6 mb-5">
-                                    PencilVoice is your go-to bot for effortlessly converting audio files into text format. Whether it's
-                                    recorded lectures, interviews, or voice notes, PencilVoice provides accurate transcriptions in seconds,
-                                    saving you time and effort. Simply upload your audio file, sit back, and let PencilVoice do the rest!
-                                    Experience the convenience of seamless audio-to-text conversion with PencilVoice today. Try it now and
-                                    elevate your productivity to new heights! #PencilVoice #AudioToText 🚀
+                                    PencilVoice is your go-to bot for effortlessly converting audio files into text format. Whether it&apos;s recorded lectures, interviews, or voice notes, PencilVoice provides accurate transcriptions in seconds, saving you time and effort. Simply upload your audio file, sit back, and let PencilVoice do the rest! Experience the convenience of seamless audio-to-text conversion with PencilVoice today. Try it now and elevate your productivity to new heights! #PencilVoice #AudioToText 🚀
                                 </p>
+
 
                             </Link>
                         </div>

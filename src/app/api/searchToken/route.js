@@ -8,7 +8,6 @@ export async function POST(req, res) {
     let passedValue = await new Response(req.body).text();
     let bodyreq = JSON.parse(passedValue);
     const { chain, address } = bodyreq
-    console.log(chain, address)
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method Not Allowed' });
     }

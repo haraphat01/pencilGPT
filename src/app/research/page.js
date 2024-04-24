@@ -57,12 +57,13 @@ export default function Homepage() {
 
     return (
         <div className="bg-white text-black  flex flex-col items-center justify-center pt-5 mt-5">
-            <h1 className="text-3xl font-bold mb-4 text-center">🚀 Welcome to PencilGPT – Your Gateway to Crypto Knowledge! 📚</h1>
+            <h1 className="text-3xl font-bold mb-4 text-center">🚀 Your Gateway to Crypto Knowledge! 📚</h1>
             <p className="mb-8 text-center">Unlock the power of artificial intelligence with PencilGPT, the ultimate web platform for all your crypto-related data needs.</p>
             <p className="mb-8 text-center">Whether you&apos;re a seasoned trader, a curious investor, or a crypto enthusiast, PencilGPT puts the world of cryptocurrency at your fingertips.</p>
             <p className="mb-8 text-center"> Fundamental analysis at your finger tips - paste the coin contract address - select the right chain and search.</p>
             <p className="mb-8 text-center font-bold"> Note: The coin must already be listed on CMC - Solana and Ton networks are not supported yet.</p>
-            <p className="mb-8 text-center font-bold"> New token that's not on CMC will not return any result.</p>
+            <p className="mb-8 text-center font-bold"> New token that&apos;s not on CMC will not return any result.</p>
+
 
             <div className="flex mb-4">
                 <input

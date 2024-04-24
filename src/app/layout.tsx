@@ -3,6 +3,7 @@ import NavBars from '../app/components/navBar'
 import Footer from '../app/components/footer' 
 import { Inter } from "next/font/google";
 import "./global.css";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <NavBars /> {/* Add the NavBar component here */}
         {children}
+        <GoogleAnalytics gaId="G-06GKRDP0K4" />
         <Footer /> 
       </body>
     </html>
