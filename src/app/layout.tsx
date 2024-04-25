@@ -8,8 +8,8 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Pencil GPT",
-  description: "Your Gateway to Crypto Knowledge",
+  title: "Pencil AI",
+  description: "The AI-Powered Platform for Next-Level Innovation",
 };
 
 export default function RootLayout({

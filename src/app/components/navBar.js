@@ -1,7 +1,7 @@
 // components/NavBar.js
 import React from "react";
 import Image from 'next/image';
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from "@nextui-org/react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
 
 
 export default function NavBars() {
@@ -36,9 +36,10 @@ export default function NavBars() {
                 </NavbarItem>
 
                 <NavbarItem>
-                    <Link color="foreground" href="/">
-                        Blog
+                    <Link href="https://t.me/TajiriBot" color="foreground" target="_blank" >
+                        Try out the bot
                     </Link>
+
 
                 </NavbarItem>
 

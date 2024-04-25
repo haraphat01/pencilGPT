@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown'
 import Image from 'next/image';
-
+import "../global.css";
 
 const styles = {
     // Define your styles here
@@ -56,7 +56,7 @@ export default function Homepage() {
     };
 
     return (
-        <div className="bg-white text-black  flex flex-col items-center justify-center pt-5 mt-5">
+        <div className="bg-white text-black  flex flex-col items-center justify-center   additionalspace">
             <h1 className="text-3xl font-bold mb-4 text-center">🚀 Your Gateway to Crypto Knowledge! 📚</h1>
             <p className="mb-8 text-center">Unlock the power of artificial intelligence with PencilGPT, the ultimate web platform for all your crypto-related data needs.</p>
             <p className="mb-8 text-center">Whether you&apos;re a seasoned trader, a curious investor, or a crypto enthusiast, PencilGPT puts the world of cryptocurrency at your fingertips.</p>
@@ -98,15 +98,15 @@ export default function Homepage() {
                     <option value="moonbeam">Moonbeam</option>
                 </select>
             </div>
-            <button onClick={handleSearch} className="bg-blue-500 text-white rounded-md px-4 py-2 mb-4 hover:bg-blue-600">Search</button>
-            
+            <button onClick={handleSearch} className="bg-blue-500 text-white rounded-md px-4 py-2 mb-5 hover:bg-blue-600">Search</button>
+
             {loading && <p className="font-beautiful">Please wait while I fetch the information ....</p>}
             {tokenData && tokenData.response && ( // Ensure tokenData is not null and has the expected properties
                 <div className="flex flex-col items-center rounded-lg rounded-md border border-black m-4 p-4">
                     <h2 className="text-2xl font-bold mb-2">{tokenData.response.tokenName} ({tokenData.response.tokenSymbol})</h2>
 
-                    <Image src={tokenData.response.tokenLogo} alt={tokenData.response.tokenName} className=" mb-2"  width={50}
-  height={50}/>
+                    <Image src={tokenData.response.tokenLogo} alt={tokenData.response.tokenName} className=" mb-2" width={50}
+                        height={50} />
                     <p className="mb-2 ">Price: {tokenData.response.usdPrice}</p>
                     <p className="mb-2">24hr Percent Change: {tokenData.response['24hrPercentChange']}</p>
                     <p className="mb-2">Exchange Name: {tokenData.response.exchangeName}</p>

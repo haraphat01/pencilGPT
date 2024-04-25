@@ -5,14 +5,14 @@ export default function HomePage() {
         <>
 
 
-            <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+            <div className="container  flex flex-wrap flex-col md:flex-row items-center">
 
-                <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+                <div className="flex flex-col w-full md:w-2/5 justify-center  text-center ">
                     <h1 className="leading-normal text-2xl md:text-4xl mb-4 md:mb-8">🚀 Welcome to the Future of Productivity with Pencil AI! 🌟</h1>
                     <p className="leading-normal text-lg md:text-2xl mb-4 md:mb-8">
                         Embark on a journey of innovation and empowerment with Pencil AI, where cutting-edge technology meets limitless possibilities. Our platform revolutionizes the way you work, learn, and interact, offering AI-powered solutions tailored to your needs. With Pencil AI, you&apos;ll experience unparalleled efficiency, insight, and convenience like never before.
                     </p>
-                    <p className="leading-normal text-lg md:text-2xl mb-4 md:mb-8">Join our vibrant community of forward-thinkers, explorers, and visionaries, and discover the boundless potential of our ecosystem. Whether you&apos;re a crypto enthusiast, a productivity aficionado, or a tech-savvy individual seeking the next big thing, Pencil AI welcomes you with open arms.</p>
+                    
 
                     <button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                         <Link href="https://t.me/+E-SXVdadAAgzNzg0" target="_blank">
@@ -30,7 +30,7 @@ export default function HomePage() {
 
 
             {/* Other sections go here */}
-            <section className="bg-white border-b py-8">
+            <section className="bg-white border-b ">
                 <div className="container mx-auto flex flex-wrap pt-4 pb-12">
                     <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
                         Products
@@ -111,6 +111,33 @@ export default function HomePage() {
                                 <div className="w-full font-bold text-xl text-gray-800 px-6 text-center pt-4 pb-4">
                                     <p>PencilGPT</p>
                                     <p> AI Search Engine for Crypto Data</p>
+                                </div>
+
+
+                                <p className="text-gray-800 text-base px-6 mb-5">
+                                    PencilGPT is a revolutionary AI-powered web platform designed to streamline your crypto research experience. With its intuitive natural language interface, PencilGPT allows users to effortlessly query any crypto-related data in plain language. Whether you&apos;re seeking price updates, market trends, or project details, PencilGPT provides comprehensive and accurate information at your fingertips. It can also be used to streamline your investment decision with the power of trained model on financial data.
+                                </p>
+
+
+                            </Link>
+                        </div>
+                        <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+                            <div className="flex items-center justify-center">
+                                <button
+                                    className="mx-auto lg:mx-0 hover:underline gradient  font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                                    Coming soon
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                        <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                            <Link href="/" className="flex flex-wrap no-underline hover:no-underline">
+
+                                <div className="w-full font-bold text-xl text-gray-800 px-6 text-center pt-4 pb-4">
+                                    <p>PencilAnalyse</p>
+                                    <p> Honeypot Detection Simplified</p>
                                 </div>
 
 
