@@ -7,7 +7,8 @@ import getGroqChatCompletion from '../../components/contractChatCompletion'
 export async function POST(req, res) {
     let passedValue = await new Response(req.body).text();
     let bodyreq = JSON.parse(passedValue);
-    const { contract } = bodyreq
+    console.log(bodyreq)
+    const { chain } = bodyreq
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method Not Allowed' });
     }
@@ -15,9 +16,9 @@ export async function POST(req, res) {
     try {
 
 
-        const groqresult = await getGroqChatCompletion(textContent);
+        const groqresult = await getGroqChatCompletion(chain);
 
-        return NextResponse.json({ response, groqresult }, { status: 200 })
+        return NextResponse.json({ groqresult }, { status: 200 })
 
     } catch (error) {
         console.error('Error:', error);
