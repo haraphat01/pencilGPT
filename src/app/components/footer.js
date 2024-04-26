@@ -37,7 +37,9 @@ const Footer = () => {
                                 <button href="https://t.me/pencilai" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Telegram</button>
                             </li>
                             <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <button href="https://twitter.com/pencilAitoken7" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</button>
+                                <Link href="https://twitter.com/pencilAitoken7">
+                                Twitter
+                                </Link>
                             </li>
                         </ul>
                     </div>

@@ -24,9 +24,6 @@ export default function Homepage() {
 
     const handleSearch = async (e) => {
         setLoading(true); // Set the loading state to true
-
-        console.log(chain, contractAddress)
-        console.log("token data", tokenData)
         const apiUrl = '/api/searchToken'; // Your API route URL
         try {
             const response = await fetch(apiUrl, {
