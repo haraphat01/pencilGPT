@@ -106,6 +106,33 @@ export default function HomePage() {
 
                     <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
                         <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+
+
+                            <div className="w-full font-bold text-xl text-gray-800 px-6 text-center pt-4 pb-4">
+                                <p>PencilAnalyser</p>
+                                <p> 📝 Quick SmartContract Analyser 🎙️</p>
+                            </div>
+
+                            <p className="text-gray-800 text-base px-6 mb-5">
+                                PencilAnalyser helps scan a smart contarct and give detailed reports about potential security flaws and improvements on the contract🚀.
+                            </p>
+
+
+                        </div>
+                        <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+                            <div className="flex items-center justify-center">
+                                <Link href="/contract" className="flex flex-wrap no-underline hover:no-underline">
+                                    <button
+                                        className="mx-auto lg:mx-0 hover:underline gradient  font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                                        Try it here
+                                    </button>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                        <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
                             <Link href="/" className="flex flex-wrap no-underline hover:no-underline">
 
                                 <div className="w-full font-bold text-xl text-gray-800 px-6 text-center pt-4 pb-4">
@@ -131,32 +158,7 @@ export default function HomePage() {
                         </div>
                     </div>
 
-                    <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-                        <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-                            <Link href="/" className="flex flex-wrap no-underline hover:no-underline">
-
-                                <div className="w-full font-bold text-xl text-gray-800 px-6 text-center pt-4 pb-4">
-                                    <p>PencilAnalyse</p>
-                                    <p> Honeypot Detection Simplified</p>
-                                </div>
-
-
-                                <p className="text-gray-800 text-base px-6 mb-5">
-                                    PencilGPT is a revolutionary AI-powered web platform designed to streamline your crypto research experience. With its intuitive natural language interface, PencilGPT allows users to effortlessly query any crypto-related data in plain language. Whether you&apos;re seeking price updates, market trends, or project details, PencilGPT provides comprehensive and accurate information at your fingertips. It can also be used to streamline your investment decision with the power of trained model on financial data.
-                                </p>
-
-
-                            </Link>
-                        </div>
-                        <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-                            <div className="flex items-center justify-center">
-                                <button
-                                    className="mx-auto lg:mx-0 hover:underline gradient  font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                                    Coming soon
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                   
 
                     <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
                         <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">

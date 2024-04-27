@@ -28,6 +28,7 @@ body {
 .button-css{
   display: flex;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 /* Target the CodeMirror editor */
 .CodeEditor {
