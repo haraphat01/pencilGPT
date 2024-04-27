@@ -20,9 +20,10 @@
     "moralis": "^2.26.1",
     "next": "^14.2.2",
     "react": "^18",
-    "react-codemirror2": "^8.0.0",
+    "react-ace": "^11.0.1",
     "react-dom": "^18",
-    "react-markdown": "^8.0.6"
+    "react-markdown": "^8.0.6",
+    "react-simple-code-editor": "^0.13.1"
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.5.6",

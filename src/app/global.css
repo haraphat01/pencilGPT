@@ -25,50 +25,18 @@ body {
   }
 }
 
+.button-css{
+  display: flex;
+  justify-content: center;
+}
 /* Target the CodeMirror editor */
-.CodeMirror {
-  height: auto;
+.CodeEditor {
+  min-height: 20rem;
   font-size: 16px;
   font-family: 'Arial, sans-serif';
   margin: 0 auto;
-  width: 90%;
+  
   border-radius: 20px;
 }
 
 /* Target the CodeMirror editor content */
-.CodeMirror pre {
-  font-size: 16px;
-  font-family: 'Arial, sans-serif';
-}
-
-/* Target the CodeMirror editor line numbers */
-.CodeMirror-linenumber {
-  color: #999;
-}
-
-/* Target the CodeMirror editor cursor */
-.CodeMirror-cursor {
-  border-left: 1px solid #000;
-}
-
-/* Target the CodeMirror editor selection */
-.CodeMirror-selected {
-  background: #d9d9d9;
-}
-
-/* Target the CodeMirror editor active line */
-.CodeMirror-activeline-background {
-  background: #e8f2ff;
-}
-
-/* Target the CodeMirror editor matching bracket */
-.CodeMirror-matchingbracket {
-  text-decoration: underline;
-  color: black !important;
-}
-
-/* Target the CodeMirror editor non-matching bracket */
-.CodeMirror-nonmatchingbracket {
-  text-decoration: underline;
-  color: red !important;
-}
