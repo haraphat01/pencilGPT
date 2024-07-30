@@ -27,9 +27,9 @@ export async function POST(req, res) {
         });
 
         let query = `latest news about ${response.jsonResponse.tokenName} coin with token symbol ${response.jsonResponse.tokenSymbol}`
-      
+
         const result = await serpResults(query);
-       
+
         let textContent = '';
 
         result.organic.forEach((item, index) => {
@@ -38,7 +38,7 @@ export async function POST(req, res) {
 
         const groqresult = await getGroqChatCompletion(textContent);
 
-      
+
 
         return NextResponse.json({ response, groqresult }, { status: 200 })
 
